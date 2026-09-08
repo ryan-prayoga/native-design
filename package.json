@@ -1,0 +1,36 @@
+{
+  "name": "native-design",
+  "version": "1.0.0",
+  "description": "The Native App Design Engine for AI Agents. Zero web wrappers. Pure OS craft across Apple, Google, Microsoft, and Linux.",
+  "main": "bin/cli.js",
+  "bin": {
+    "native-design": "./bin/cli.js"
+  },
+  "scripts": {
+    "audit": "node ./bin/cli.js audit .",
+    "test": "node ./bin/cli.js audit ./examples"
+  },
+  "keywords": [
+    "design-system",
+    "apple-hig",
+    "liquid-glass",
+    "material3-expressive",
+    "winui",
+    "libadwaita",
+    "swiftui",
+    "jetpack-compose",
+    "cursorrules",
+    "ai-agents",
+    "claude-code"
+  ],
+  "author": "Ryan Prayoga",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-prayoga/native-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryan-prayoga/native-design/issues"
+  },
+  "homepage": "https://github.com/ryan-prayoga/native-design#readme"
+}

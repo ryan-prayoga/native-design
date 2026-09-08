@@ -2,6 +2,10 @@
 
 <div align="center">
 
+<img src="assets/banner.svg" alt="native-design banner" width="100%" />
+
+<br/><br/>
+
 # The Native App Design Engine for AI Agents
 
 **Stop letting AI turn your mobile & desktop apps into web wrappers. Pure OS craft.**
@@ -11,7 +15,7 @@
 [![Standard: 2026 Ready](https://img.shields.io/badge/Era-2026%20Ready-emerald.svg)](#supported-platforms)
 [![Zero-Slop Certified](https://img.shields.io/badge/Anti--AI--Slop-Guaranteed-purple.svg)](#the-anti-slop-guarantee)
 
-[Quickstart](#quickstart) • [The Problem](#why-ai-generated-native-ui-feels-cheap) • [Before vs After](#the-moment-of-truth-before-vs-after) • [Rosetta Stone Matrix](#the-rosetta-stone-matrix) • [Contributing](#contributing)
+[Quickstart](#quickstart) • [The Problem](#why-ai-generated-native-ui-feels-cheap) • [Before vs After](#the-moment-of-truth-before-vs-after) • [Examples](#reference-implementations) • [Rosetta Stone Matrix](#the-rosetta-stone-matrix) • [Contributing](#contributing)
 
 </div>
 
@@ -131,11 +135,31 @@ Add `native-design` rules to your project:
 curl -fsSL https://raw.githubusercontent.com/ryan-prayoga/native-design/main/.cursorrules >> .cursorrules
 ```
 
-### 3. CLI Audit (Coming Soon)
+### 3. CLI Audit & Rosetta Engine
+Run the audit engine directly against any native codebase:
+
 ```bash
-npx native-design audit ./src --platform=ios
-npx native-design audit ./src --platform=android
+# Audit a project or directory
+npx native-design audit ./src
+
+# Query the Rosetta Stone for any universal UI concept
+npx native-design rosetta canvas_background
+npx native-design rosetta primary_navigation
+
+# View supported 2026 platform specifications
+npx native-design platforms
 ```
+
+---
+
+## Reference Implementations
+
+Explore compilable, S-Rank native implementations in the [`examples/`](./examples) directory:
+
+- [🍏 **Apple (SwiftUI 6+)**](./examples/apple/SettingsView.swift): Liquid Glass cards, Dynamic Type with `@ScaledMetric`, strict 44pt touch targets, and Core Haptics.
+- [🤖 **Google (Android 17)**](./examples/google/SettingsScreen.kt): Compose-first architecture, `MotionScheme.expressive()`, HCT dynamic colors, and 48dp thumb ergonomics.
+- [🪟 **Microsoft (Windows 11)**](./examples/windows/SettingsPage.xaml): WinUI 3 XAML, Mica Alt 2.0 backdrop, dual-density 32px mouse targets, and Segoe UI Variable.
+- [🐧 **Linux (GNOME 50/51)**](./examples/linux/preferences_dialog.py): GTK4 & Libadwaita 1.7 Python, Wayland-only compliance, `AdwHeaderBar`, and `@accent_color` integration.
 
 ---
 

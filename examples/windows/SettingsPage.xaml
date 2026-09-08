@@ -1,0 +1,95 @@
+<!--
+  SettingsPage.xaml
+  native-design: Microsoft Windows Ecosystem (Windows 11 & WinUI Era)
+  Demonstrates Fluent 2 styling, MicaAlt backdrop, SettingsExpander, and 32px mouse density.
+-->
+<Page
+    x:Class="NativeDesign.Examples.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="36,24,36,24">
+        <StackPanel MaxWidth="800" Spacing="24" HorizontalAlignment="Left">
+            
+            <!-- Page Header -->
+            <TextBlock Text="Settings" 
+                       Style="{StaticResource TitleLargeTextBlockStyle}" 
+                       FontFamily="Segoe UI Variable Display" 
+                       FontWeight="SemiBold"/>
+
+            <!-- User Profile Section Card -->
+            <Border Background="{ThemeResource LayerFillColorDefaultBrush}" 
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                    BorderThickness="1" 
+                    CornerRadius="8" 
+                    Padding="20">
+                <Grid ColumnDefinitions="Auto,*">
+                    <PersonPicture Grid.Column="0" DisplayName="Ryan Prayoga" Width="56" Height="56" Margin="0,0,16,0"/>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="Ryan Prayoga" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiBold"/>
+                        <TextBlock Text="Windows 11 WinUI Verified • Mica Alt 2.0" 
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" 
+                                   Style="{StaticResource CaptionTextBlockStyle}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Preferences Group Header -->
+            <TextBlock Text="Personalization" 
+                       Style="{StaticResource BodyStrongTextBlockStyle}" 
+                       Foreground="{ThemeResource TextFillColorPrimaryBrush}" 
+                       Margin="4,8,0,0"/>
+
+            <!-- Settings Expander Card (Standard Windows 11 Pattern) -->
+            <StackPanel Spacing="4">
+                <Border Background="{ThemeResource LayerFillColorDefaultBrush}" 
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                        BorderThickness="1" 
+                        CornerRadius="4" 
+                        Padding="16,12">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <FontIcon Grid.Column="0" Glyph="&#xE790;" FontSize="20" Margin="0,0,16,0" Foreground="{ThemeResource SystemAccentColor}"/>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock Text="Hardware-Accelerated Mica" Style="{StaticResource BodyTextBlockStyle}"/>
+                            <TextBlock Text="Sample dynamic desktop wallpaper through application canvas" 
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" 
+                                       Style="{StaticResource CaptionTextBlockStyle}"/>
+                        </StackPanel>
+                        <!-- 32px Compact Mouse Control Height -->
+                        <ToggleSwitch Grid.Column="2" IsOn="True" MinHeight="32" OnContent="" OffContent="" Margin="0"/>
+                    </Grid>
+                </Border>
+
+                <Border Background="{ThemeResource LayerFillColorDefaultBrush}" 
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                        BorderThickness="1" 
+                        CornerRadius="4" 
+                        Padding="16,12">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <FontIcon Grid.Column="0" Glyph="&#xE72D;" FontSize="20" Margin="0,0,16,0" Foreground="{ThemeResource SystemAccentColor}"/>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock Text="Snap Layouts Hints" Style="{StaticResource BodyTextBlockStyle}"/>
+                            <TextBlock Text="Display native window tiling menu on maximize button hover" 
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" 
+                                       Style="{StaticResource CaptionTextBlockStyle}"/>
+                        </StackPanel>
+                        <ToggleSwitch Grid.Column="2" IsOn="True" MinHeight="32" OnContent="" OffContent="" Margin="0"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <!-- Action Button -->
+            <Button Content="Sign Out" 
+                    Style="{StaticResource AccentButtonStyle}" 
+                    Background="{ThemeResource SystemFillColorCriticalBrush}" 
+                    MinHeight="32" 
+                    MinWidth="120"
+                    CornerRadius="4"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
