@@ -118,7 +118,7 @@ Add `native-design` to your agent skill directory:
 
 ```bash
 # Clone directly into your personal agent skills
-git clone https://github.com/ryanprayoga/native-design.git ~/.gemini/config/skills/native-design
+git clone https://github.com/ryan-prayoga/native-design.git ~/.gemini/config/skills/native-design
 ```
 
 Or reference `SKILL.md` directly in your workspace.
@@ -128,7 +128,7 @@ Add `native-design` rules to your project:
 
 ```bash
 # Append native rules to your .cursorrules
-curl -fsSL https://raw.githubusercontent.com/ryanprayoga/native-design/main/.cursorrules >> .cursorrules
+curl -fsSL https://raw.githubusercontent.com/ryan-prayoga/native-design/main/.cursorrules >> .cursorrules
 ```
 
 ### 3. CLI Audit (Coming Soon)
