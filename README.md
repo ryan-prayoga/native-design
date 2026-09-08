@@ -39,6 +39,10 @@ When you ask LLMs (Claude, Cursor, ChatGPT, Copilot) to build a mobile or deskto
 
 ## The Moment of Truth: Before vs After
 
+<p align="center">
+  <img src="assets/before-after.png" alt="Before vs After: AI Slop vs Native Craft" width="100%" />
+</p>
+
 | ❌ Default AI Output (Web-Slop Mentality) | ✨ With `native-design` (Pure OS Craft) |
 | :--- | :--- |
 | **Color:** Raw `#1E293B` hardcoded into UI views. Breaks when user toggles dark theme. | **Semantic Tokens:** `Color(uiColor: .systemBackground)` or `MaterialTheme.colorScheme.surface`. Automatically adapts to dynamic wallpaper tinting and contrast modes. |
