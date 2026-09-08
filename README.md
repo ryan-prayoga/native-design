@@ -80,6 +80,10 @@ $ npx native-design audit ./src
 
 ## Supported Platforms (2026 Standards)
 
+<p align="center">
+  <img src="assets/showcase.jpg" alt="Supported Platforms: One Engine • 4 Native Souls" width="100%" />
+</p>
+
 `native-design` treats all four major native ecosystems as **first-class citizens**:
 
 ### 🍏 Apple Ecosystem (iOS, iPadOS, macOS, watchOS, visionOS)
