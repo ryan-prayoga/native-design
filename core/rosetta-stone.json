@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RosettaStoneDesignMap",
+  "description": "Deterministic 1-to-1 mapping of universal UI primitives across Apple, Google, Microsoft, and Linux native ecosystems in the 2026 era.",
+  "version": "1.0.0",
+  "primitives": {
+    "canvas_background": {
+      "apple_swiftui": "Color(uiColor: .systemBackground)",
+      "google_compose": "MaterialTheme.colorScheme.surface",
+      "microsoft_winui": "ApplicationPageBackgroundThemeBrush (or MicaBackdrop)",
+      "linux_adwaita": "@window_bg_color"
+    },
+    "card_container": {
+      "apple_swiftui": "Color(uiColor: .secondarySystemBackground)",
+      "google_compose": "MaterialTheme.colorScheme.surfaceContainer",
+      "microsoft_winui": "LayerFillColorDefaultBrush",
+      "linux_adwaita": "@view_bg_color (class: .card)"
+    },
+    "primary_text": {
+      "apple_swiftui": "Color.primary",
+      "google_compose": "MaterialTheme.colorScheme.onSurface",
+      "microsoft_winui": "TextFillColorPrimaryBrush",
+      "linux_adwaita": "@window_fg_color"
+    },
+    "secondary_text": {
+      "apple_swiftui": "Color.secondary",
+      "google_compose": "MaterialTheme.colorScheme.onSurfaceVariant",
+      "microsoft_winui": "TextFillColorSecondaryBrush",
+      "linux_adwaita": "@shade_color (class: .dim-label)"
+    },
+    "accent_action": {
+      "apple_swiftui": "Color.accentColor",
+      "google_compose": "MaterialTheme.colorScheme.primary",
+      "microsoft_winui": "SystemAccentColor",
+      "linux_adwaita": "@accent_color / @accent_bg_color"
+    },
+    "destructive_action": {
+      "apple_swiftui": "Color.red",
+      "google_compose": "MaterialTheme.colorScheme.error",
+      "microsoft_winui": "SystemFillColorCriticalBrush",
+      "linux_adwaita": "@error_color (class: .destructive-action)"
+    },
+    "minimum_interactive_size": {
+      "apple_swiftui": "44pt x 44pt (iOS/iPadOS), 60pt x 60pt (visionOS)",
+      "google_compose": "48dp x 48dp (with min 8dp spacing)",
+      "microsoft_winui": "32px x 32px (Mouse) / 40px x 40px (Touch)",
+      "linux_adwaita": "40px x 40px (Touch) / compact desktop padding"
+    },
+    "primary_navigation": {
+      "apple_swiftui": "TabView with floating Liquid Glass capsule or NavigationSplitView",
+      "google_compose": "AdaptiveNavigationSuiteScaffold (NavigationBar / NavigationRail / Drawer)",
+      "microsoft_winui": "NavigationView (Left collapsible sidebar with breadcrumbs)",
+      "linux_adwaita": "AdwHeaderBar with centered AdwViewSwitcher"
+    },
+    "preferences_form": {
+      "apple_swiftui": "Form { Section { ... } } with grouped inset styling",
+      "google_compose": "ExpressiveList / LazyColumn with tonal card selectors",
+      "microsoft_winui": "SettingsExpander with Segoe Fluent iconography",
+      "linux_adwaita": "AdwPreferencesPage with AdwPreferencesGroup and AdwActionRow"
+    },
+    "meta_materials": {
+      "apple_swiftui": "Liquid Glass (Refractive meta-material with contrast guard)",
+      "google_compose": "Tonal Elevation (Levels 0 to 5) with HCT harmonic meshes",
+      "microsoft_winui": "Mica & Mica Alt 2.0 (DirectComposition wallpaper sampling) & Acrylic",
+      "linux_adwaita": "Flat contrast surface border + subtle inner shadow"
+    }
+  }
+}

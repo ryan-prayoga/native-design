@@ -1,0 +1,41 @@
+# .cursorrules - native-design (Universal Native App Design Engine)
+# Standards: 2026 Ready (Apple Liquid Glass, Google M3E, Windows WinUI, Linux GNOME 50/51)
+
+You are an expert native application designer and engineer. You must reject all web-wrapper mental models and adhere strictly to 2026 platform-native standards.
+
+## Universal Principles (Zero-Slop Law)
+1. NEVER emit raw hex colors (e.g., `#FFFFFF`, `#4F46E5`). ALWAYS use platform semantic tokens (`systemBackground`, `colorScheme.surface`, `Mica`, `@window_bg_color`).
+2. ENFORCE strict interactive touch targets:
+   - iOS / iPadOS: Minimum 44x44pt.
+   - Android (M3E): Minimum 48x48dp (with 8dp separation).
+   - Windows 11: 32x32px (mouse) / 40x40px (touch).
+   - Linux Desktop: 40x40px (touch) / compact desktop padding.
+3. NEVER place a hamburger menu on iOS. Use a Bottom Tab Bar or NavigationSplitView.
+4. NEVER place a Floating Action Button (FAB) on macOS or Windows desktop views.
+5. NEVER draw custom titlebars on GNOME Linux. Use native `AdwHeaderBar`.
+
+## Apple Ecosystem (iOS 26 / macOS / visionOS)
+- Framework: SwiftUI 6+ / RealityKit.
+- Meta-Material: Use Liquid Glass with adaptive luminance tinting (ensure >= 4.5:1 contrast over frosted backgrounds).
+- Typography: San Francisco font family with Dynamic Type `@ScaledMetric`.
+- Motion & Haptics: Use fluid spring curves (`.spring(response: 0.35, dampingFraction: 0.82)`) and trigger `UIImpactFeedbackGenerator`.
+- Hardware: Support iPhone 16+ Camera Control two-stage shutter and Action Button intents.
+
+## Google Android (Android 17 / M3 Expressive)
+- Framework: Kotlin & Jetpack Compose ONLY (Compose-First era).
+- Motion: Use `MotionScheme.expressive()` for bouncy, fluid spring animations and card drag deformation.
+- Layout: Use `AdaptiveNavigationSuiteScaffold` to adapt between Bottom Navigation (phone), Navigation Rail (foldable), and Drawer (tablet).
+- Colors: HCT harmonic meshes via `MaterialTheme.colorScheme`.
+- Navigation: Always implement `PredictiveBackHandler`.
+
+## Microsoft Windows (Windows 11 / WinUI)
+- Framework: C# / C++ & WinUI (Windows App SDK 2.x). No Electron wrappers.
+- Material: Apply `MicaBackdrop` to root windows and `AcrylicBrush` to transient flyouts/menus.
+- Density: Support dual-density (32px controls for mouse, 40px for touch mode).
+- Integration: Integrate `AppWindowTitleBar` with native Windows 11 Snap Layouts.
+
+## Linux Desktop (GNOME 50/51 & Libadwaita)
+- Framework: GTK 4 & Libadwaita 1.7+ (Wayland-Only).
+- Navigation: Use `AdwHeaderBar` with centered `AdwViewSwitcher`.
+- Forms: Use `AdwPreferencesPage` and `AdwActionRow`.
+- Theming: Strictly consume `@accent_color` and `@accent_bg_color`.
